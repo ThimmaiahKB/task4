@@ -1,0 +1,98 @@
+
+<html>
+<head>
+
+	<style type="text/css">
+		#c
+		{
+			align-items: center;
+			justify-content: center;
+			background-color: #ddd;
+			display: flex;
+			height:199px;
+
+		}
+		#change
+		{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: blue;
+			height: 150px;
+			width:25%;
+			
+			
+		}
+		.outer
+		{
+			align-items: center;
+			justify-content: center;
+			display:flex;
+			background: #ddd;
+
+		}
+		.ot
+		{
+
+			align-items: center;
+			justify-content: center;
+			display:flex;
+			background: #999966;
+			width:25%;
+			height:150px;
+			margin-bottom: 10px;
+		}
+		.count
+		{
+			align-items: center;
+			justify-content: center;
+
+		}
+		span
+		{
+			font-size: 15px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="c">
+		<div id="change"><h5>Color is changing</h5></div>
+	</div>
+	<div class="outer">
+	<div class="ot">
+		<span id="count"></span>
+	</div>
+	</div>
+
+</body>
+<script>
+		var count=0;
+		setInterval(function()
+		{
+			
+			var val = confirm("Type your text here.");
+			if (val == true)
+	 		{
+				alert("You pressed OK.");
+				document.getElementById("change").style.backgroundColor="red"
+				count++;
+				document.getElementById("count").innerHTML="You Pressed ok this many times :"+count;
+		
+
+			} 
+			else 
+			{
+				alert("You pressed Cancel.");
+		
+				document.getElementById("change").style.backgroundColor="yellow";
+			}
+		}, 8000);
+
+			
+	    
+	
+
+	
+	</script>
+	</html>
